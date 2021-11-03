@@ -29,7 +29,7 @@ async create (data) {
     id: faker.datatype.uuid(),
     ...data
   }
-  this.products.push(newUser);
+  this.users.push(newUser);
   return newUser;
 }
 
