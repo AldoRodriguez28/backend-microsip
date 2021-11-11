@@ -11,12 +11,16 @@ class ProductServices {
 generate() {
   const limit = 100;
   for (let i = 0; i < limit; i++) {
+    let costoprod = parseInt(faker.commerce.price(), 10);
+    let precioprod = costoprod * 1.30;
+    let ivaprod = precioprod *0.16;
+
     this.products.push({
       id: faker.datatype.uuid(),
       name: faker.commerce.productName(),
-      price: parseInt(faker.commerce.price(), 10),
-      image: faker.image.imageUrl(),
-      isBlock: faker.datatype.boolean()
+      costo: costoprod,
+      price: precioprod,
+      iva: ivaprod,
     })
   }
 }
