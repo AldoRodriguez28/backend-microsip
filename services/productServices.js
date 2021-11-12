@@ -11,9 +11,9 @@ class ProductServices {
 generate() {
   const limit = 100;
   for (let i = 0; i < limit; i++) {
-    let costoprod = parseInt(faker.commerce.price(), 10);
-    let precioprod = costoprod * 1.30;
-    let ivaprod = precioprod *0.16;
+    let costoprod = parseFloat(faker.commerce.price()).toFixed(2);
+    let precioprod = parseFloat(costoprod * 1.30).toFixed(2);
+    let ivaprod = parseFloat(precioprod *0.16).toFixed(2);
 
     this.products.push({
       id: faker.datatype.uuid(),
