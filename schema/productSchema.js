@@ -7,6 +7,7 @@ const price = Joi.number();
 const iva = Joi.number();
 
 const createProductSchema = Joi.object({
+  id: id.required(),
   name: name.required(),
   costo: costo.required(),
   price: price.required(),
